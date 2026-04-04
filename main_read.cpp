@@ -5,23 +5,28 @@ using namespace std;
 
 int main()
 {
-    int M;
-    double score1, score2, sum, avg;
-    string stuName;
-    ifstream ifs;
+  ifstream ifs;
+  string sname;
+  int score1, score2, sum;
+  double avg;
+  ifs.open("Students.txt");
+  if (!ifs.is_open()){
+    cerr << "Error opening file!";
+    return 1;
+  }
+  ifs >> N;
+  for(int i=0l i<N; i++){
+    ifs >> sname >> score1 >> score2;
+    sum = score1 + score2;
+    avg = sum / 2.0;
+    cout << sname << " " << avg << endl;
+  }
 
     // TODO: open "students.txt" for reading
 
     // TODO: check if file opened successfully; print error and exit if not
 
     // TODO: read M from ifs, print "Total M students"
-
-    for (int i = 0; i < M; i++)
-    {
-        // TODO: read stuName, score1, score2 from ifs
-        // TODO: compute sum = score1 + score2, avg = sum / 2.0
-        // TODO: print Student Name, score1, score2, Sum, Avg
-    }
     ifs.close();
     return 0;
 }

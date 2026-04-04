@@ -3,25 +3,23 @@
 #include <string>
 using namespace std;
 
+
 int main()
 {
-    int N;
-    double score1, score2;
-    string stuName;
-    ofstream ofs;
+  ofstream file;
+  string sname;
+  int score1, score2, N;
+  cin >> N;
+  file.open("Students.txt");
+  if (!file.is_open()){
+    cerr << "Error opening file!" << endl;
+    return 1;
+  }
+  file << N << endl;
+  for (int i=0; i<N; i++){
+    cin >> sname >> score1 >> score2;
+    file << sname << " " << score1 << " " << score2 << endl;
 
-    // TODO: open "students.txt" for writing
-
-    // TODO: check if file opened successfully; print error and exit if not
-
-    cout << "Enter the total number of students:";
-    // TODO: read N from cin, write N to ofs
-
-    for (int i = 0; i < N; i++)
-    {
-        cout << "Enter the student name and two scores: ";
-        // TODO: read stuName, score1, score2 from cin; write them to ofs
-    }
-    // TODO: close ofs
+  }
     return 0;
 }
