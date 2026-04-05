@@ -21,7 +21,7 @@ int main()
     ifs >> sname >> score1 >> score2;
     sum = score1 + score2;
     avg = sum / 2.0;
-    cout << "Student Name: " <<  sname << " " << avg << endl;
+    cout << "Student Name: " <<  sname << " score1: " << score1 << " score2: " << score2 << " Sum: " << sum << " Avg: " << avg << endl;
   }
 
     // TODO: open "students.txt" for reading
