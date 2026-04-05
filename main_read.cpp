@@ -7,19 +7,21 @@ int main()
 {
   ifstream ifs;
   string sname;
-  int score1, score2, sum;
-  double avg;
+  int N;
+  double score1, score2, sum, avg;
   ifs.open("Students.txt");
   if (!ifs.is_open()){
     cerr << "Error opening file!";
     return 1;
   }
   ifs >> N;
-  for(int i=0l i<N; i++){
+  cout << "Total " << N << " " << endl; 
+
+  for(int i=0; i<N; i++){
     ifs >> sname >> score1 >> score2;
     sum = score1 + score2;
     avg = sum / 2.0;
-    cout << sname << " " << avg << endl;
+    cout << "Student Name: " <<  sname << " " << avg << endl;
   }
 
     // TODO: open "students.txt" for reading
