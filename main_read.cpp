@@ -28,7 +28,7 @@ int main()
 
     // TODO: check if file opened successfully; print error and exit if not
 
-    // TODO: read M from ifs, print "Total M students"
+    // TODO: read M from ifs, print "Total M students" 
     ifs.close();
     return 0;
 }
